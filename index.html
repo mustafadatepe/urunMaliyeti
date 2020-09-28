@@ -1,0 +1,40 @@
+<html> 
+<head> 
+<title>   Maliyet Hesaplama V1.0
+</title> 
+<script language="javaScript"> 
+ 
+function Pazaryeri(ne){ 
+ne.sonuç.value=(parseFloat(ne.say1.value)*parseFloat(ne.say2.value)*parseFloat(ne.say3.value))*0.78+8.84; 
+} 
+function Siteveİnstagram(ne){ 
+ne.sonuç.value=parseFloat(ne.say1.value)*parseFloat(ne.say2.value)*parseFloat(ne.say3.value)+8.84; 
+} 
+
+</script> 
+ 
+</head> 
+<body> 
+<table border="100" width="100"bgcolor="black
+"><tr><td> 
+<form name="formum"><font color="white"> 
+<center><b>Maliyet Hesaplama v1.0</b></center> 
+Ürün Gramı<input type="text" name="say1"> 
+<br>Ürün Barkodu<input type="text" name="say2"> 
+<br>Dolar Kuru<input type="text" name="say3">
+<br><label style="color: white; margin-bottom: 10px;">Kargo Bedeli: 8.84 TL</label>
+<br><label style="color: white; margin-bottom: 10px;">Pazaryeri Komisyonu: %22</label>
+<br>Sonuç<input type="text" name="sonuç"> 
+<center> 
+<input type="button" value="Pazaryeri" onclick="Pazaryeri(this.form)"> 
+<input type="button" value="Site" onclick="Siteveİnstagram(this.form)"> 
+
+<input type="reset" value="SIL"><hr>©2020 BY ESTİVA
+</form> 
+
+ 
+ 
+ 
+</td></tr></table> 
+</body> 
+</html>
