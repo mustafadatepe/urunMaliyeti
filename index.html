@@ -5,20 +5,32 @@
 <script language="javaScript"> 
  
 function Pazaryeri(ne){ 
-ne.sonuç.value=(parseFloat(ne.say1.value)*parseFloat(ne.say2.value)*parseFloat(ne.say3.value))*0.78+8.84; 
+ne.sonuç.value=(parseFloat(ne.say1.value)*parseFloat(ne.say2.value)*parseFloat(ne.say3.value))*0.22+parseFloat(ne.say1.value)*parseFloat(ne.say2.value)*parseFloat(ne.say3.value)+8.84; 
 } 
 function Siteveİnstagram(ne){ 
 ne.sonuç.value=parseFloat(ne.say1.value)*parseFloat(ne.say2.value)*parseFloat(ne.say3.value)+8.84; 
 } 
+function satisFiyatı(ne){ 
+ne.sonuç.value=(parseFloat(ne.say1.value)*parseFloat(ne.say2.value)*parseFloat(ne.say3.value))*2.30; 
+} 
 
+function kapat(){
+window.close();
+}
+function karHesapla(ne){
+ne.sonuç1.value=parseFloat(ne.say1.value)*0.78-(parseFloat(ne.say1.value)/2.3)-8.84;
+}
+function kampanyaKarıHesapla(ne){
+
+}
 </script> 
- 
 </head> 
 <body> 
+
 <table border="100" width="100"bgcolor="black
 "><tr><td> 
 <form name="formum"><font color="white"> 
-<center><b>Maliyet Hesaplama v1.0</b></center> 
+<center><b>Maliyet Hesaplama</b></center> 
 Ürün Gramı<input type="text" name="say1"> 
 <br>Ürün Gram Fiyatı<input type="text" name="say2"> 
 <br>Dolar Kuru<input type="text" name="say3">
@@ -26,15 +38,33 @@ ne.sonuç.value=parseFloat(ne.say1.value)*parseFloat(ne.say2.value)*parseFloat(n
 <br><label style="color: white; margin-bottom: 10px;">Pazaryeri Komisyonu: %22</label>
 <br>Sonuç<input type="text" name="sonuç"> 
 <center> 
-<input type="button" value="Pazaryeri" onclick="Pazaryeri(this.form)"> 
-<input type="button" value="Site" onclick="Siteveİnstagram(this.form)"> 
-
-<input type="reset" value="SIL"><hr>©2020 BY ESTİVA
+<input style="margin-top: 10px;" type="button" value="Satış Fiyatı Çıkar" onclick="satisFiyatı(this.form)"> 
+<input style="margin-top: 10px" type="button" value="Pazaryeri Maliyet" onclick="Pazaryeri(this.form)"> 
+<input style="margin-top: 10px" type="button" value="Site Maliyet" onclick="Siteveİnstagram(this.form)"> 
+ <input style="margin-top: 10px;" type="reset" value="Temizle"> 
+<input style="margin-top: 10px" type="button" value="Kapat" onclick="kapat(this.form)"> <hr>©2020 BY ESTİVA
 </form> 
-
- 
- 
- 
 </td></tr></table> 
+
+<div style="position: absolute; left: 0px;margin-top: -594;margin-left: 390">
+<table border="100" width="100"bgcolor="black
+"><tr><td> 
+<form name="formum"><font color="white"> 
+<center><b>Kampanya Maliyet Hesaplama</b></center> 
+Güncel Satış Fiyatı<input type="text" name="say1"> 
+<br>İndirim Yüzdesi<input type="text" name="say2">
+
+<br>SONUÇ<input type="text" name="sonuç1"> 
+
+<center> 
+<input style="margin-top: 10px;" type="button" value="Karı Hesapla" onclick="karHesapla(this.form)"> 
+<input style="margin-top: 10px;" type="button" value="Kampanya Karı Hesapla" onclick="kampanyaKarıHesapla(this.form)"> 
+<input style="margin-top: 10px;" type="reset" value="Temizle"> 
+<input style="margin-top: 10px" type="button" value="Kapat" onclick="kapat(this.form)"> <hr>©2020 BY ESTİVA
+<b></b>
+</form> 
+</td></tr></table> 
+</div>
+
 </body> 
 </html>
